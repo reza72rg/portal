@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+<header>
+  <img src="{{ companies.logo.url }}" class="logo" alt="Logo">
+  <div class="header-items">
+    <a href="/">
+      <div class="menu-item">خانه</div>
+    </a>
+    <div class="menu-item">
+      مستندات
+      <div class="submenu">
+        <div>مستند ۱</div>
+        <div>مستند ۲</div>
+        <div>مستند ۳</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      راهنمای نرم افزار
+      <div class="submenu">
+        <div>بخش ۱</div>
+        <div>بخش ۲</div>
+        <div>بخش ۳</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      دانلود نرم افزار
+      <div class="submenu">
+        {% for software in softwares %}
+        <li>
+                <a href="{{ software.software_file.url }}" download>
+                     {{ software.name }}
+                </a>
+            </li>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</header>
+
+
+ {% block content %}
+
+
+
+  {%endblock%}
+
+
+
+
+          <script src="{% static 'home/App.js' %}"></script>
+  </body>
+</html>

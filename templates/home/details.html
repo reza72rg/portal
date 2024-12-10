@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<div class="news-details">
+    <h1>{{ article.title }}</h1>
+    <div class="news-meta">
+        <span class="news-date">
+            <i class="fa-solid fa-calendar-days"></i>
+            {{ article.published_date }}
+        </span>
+        {% if article.image.url %}
+        <div class="news-image">
+<img src="{{ article.image.url }}" alt="{{ article.title }}" width="100" height="100" />
+        </div>
+        {% endif %}
+    </div>
+    <div class="news-content">
+        {{ article.content }}
+    </div>
+    <a href="/" class="back-link">
+        <i class="fa-solid fa-chevron-left"></i> Back to Home
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salamatnegar</title>
+    <link rel="stylesheet" href="{% static 'home/portal/styles.css' %}">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="{% static 'home/portal/logo.png' %}" alt="Company Logo" class="logo">
+    </div>
+    <script src="{% static 'home/portal/script.js' %}"></script>
+<script>
+    // Pass the URL to the external script
+    const redirectUrl = "{% url 'home:portal' %}";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            window.location.href = redirectUrl; // Use the URL passed from the template
+        }, 5000);
+    });
+</script>
+
+</body>
+</html>

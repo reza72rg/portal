@@ -1,0 +1,165 @@
+
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}Salamatnegar{% endblock %}
+
+{% block content%}
+      <!-- top -->
+      <div class="top">
+        <!-- right side of top -->
+        <div class="top-right">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for slide in slides %}
+              <div class="swiper-slide">
+                <div class="slider">
+                  <img src="{{ slide.image.url }}" alt="" />
+                </div>
+              </div>
+          {% endfor %}
+            </div>
+          </div>
+
+          <div class="bottom-right">
+            <h2>اطلاعیه ها</h2>
+            <div class="notice-list">
+              <span>
+                <i class="fa fa-users"></i>
+                <div class="info">
+                  <p>
+افتتاح پورتال داخلی سلامت‌نگر به منظور بهبود دسترسی بهتر کارمندان                  </p>
+                  <span class="details">
+                    <div class="date">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      1403/09/18
+                    </div>
+                    <div class="more">
+                      ادامه مطلب
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                  </span>
+                </div>
+              </span>
+<div class="list">
+  <ul>
+    {% for article in articles %}
+      <li>
+        <div>{{ article.get_jalali_published }}</div>
+        <a href="/">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination">
+  <ul>
+    {% if articles.has_previous %}
+
+      <li><a href="?page={{ articles.previous_page_number }}">قبلی</a></li>
+    {% endif %}
+
+    <li>صفحه {{ articles.number }} از {{ articles.paginator.num_pages }}</li>
+
+    {% if articles.has_next %}
+      <li><a href="?page={{ articles.next_page_number }}">بعدی</a></li>
+
+    {% endif %}
+  </ul>
+</div>
+
+
+
+              <div class="more2">
+                <span>f</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+  <!-- Left side of top -->
+<div class="top-left">
+  <div id="birthday-widget">
+    <div class="birthday-text">
+      <i class='fas fa-birthday-cake custom-icon'></i>
+      <h4>تولد ها</h4>
+    </div>
+    <i class="fa-solid fa-chevron-down" id="icon"></i>
+
+    <ul id="birthday-list" class="hidden">
+      {% for member in members %}
+      <li>
+        <img src="{{ member.image.url }}" alt="{{ member.name }}'s image"
+             style="width: 20px; height: 20px; border-radius: 50%; margin-left: 5px;">
+        <div class="name">{{ member.name }}</div>
+        <div class="birthday">{{ member.get_jalali_birthday }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+
+
+
+
+  <h2 class="list-heading">سایت های داخلی سازمان</h2>
+<div class="top-left">
+
+  <div class="list">
+
+    <ul id="software-list">
+      {% for url in urls %}
+      <li>
+        <a href="{{ url.url }}" target="_blank" class="software-link">
+          <i class="fa fa-cogs"></i> {{ url.description }}
+          <i class="fa fa-chevron-left"></i>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+          <h2>شبکه های اجتماعی شرکت</h2>
+        <div class="social-media">
+
+    <div class="link linkedin">
+              <a href="{{ companies.linkedin }}" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+        linkedin
+              </a>
+    </div>
+
+<div class="link whatsapp">
+     <a href="{{ companies.whatsapp }}" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  whatsapp
+           </a>
+    </div>
+
+    <div class="link instagram">
+                    <a href="{{ companies.instagram }}" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+                       </a>
+    </div>
+    <div class="link telegram">
+             <a href="{{ companies.telegram }}" target="_blank">
+        <i class="fa-brands fa-telegram"></i>
+        Telegram
+             </a>
+    </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  {% endblock %}

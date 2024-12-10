@@ -1,0 +1,23 @@
+# General modules
+Django>=4.2,<5
+python-decouple
+Pillow
+
+# Code formatting and linting
+black
+flake8
+
+# Testing
+pytest
+pytest-django
+
+# Data generation
+Faker
+persiantools
+
+# Jalali date handling
+django-jalali
+
+# Rich Text Editing
+django-ckeditor==6.7.0
+django-summernote==0.8.20.0
