@@ -67,13 +67,6 @@
     {% endif %}
   </ul>
 </div>
-
-
-
-              <div class="more2">
-                <span>f</span>
-
-              </div>
             </div>
           </div>
         </div>
@@ -85,7 +78,7 @@
 <div class="top-left">
   <div id="birthday-widget">
     <div class="birthday-text">
-      <i class='fas fa-birthday-cake custom-icon'></i>
+      <i class='fa-solid fa-cake-candles'></i>
       <h4>تولد ها</h4>
     </div>
     <i class="fa-solid fa-chevron-down" id="icon"></i>
@@ -115,7 +108,9 @@
       {% for url in urls %}
       <li>
         <a href="{{ url.url }}" target="_blank" class="software-link">
-          <i class="fa fa-cogs"></i> {{ url.description }}
+          <span>
+            <i class="fa fa-cogs"></i> {{ url.description }}
+          </span>
           <i class="fa fa-chevron-left"></i>
         </a>
       </li>
