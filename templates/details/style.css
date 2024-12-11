@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "IRANYekanXFaNum";
+  src: url("/home/static/home/fonts/IRANYekanXFaNum-Bold.woff2") format("woff2"),
+    url("/home/static/home/fonts/IRANYekanXFaNum-Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #f8f9fd;
+  font-family: IRANYekanXFaNum;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(226, 226, 226);
+  gap: 1rem;
+  width: 80%;
+  margin: 0 50px 0 5px;
+  padding: 5px 0px 5px 10px;
+}
+.header-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-size:medium;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+#birthday-widget {
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  background-color: #33c1c3;
+}
+#birthday-widget .birthday-text {
+  display: flex;
+  gap: 10px;
+}
+
+#birthday-list {
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  top: 35px;
+  right: 155px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: right;
+  width: 200px;
+  z-index: 10;
+}
+#birthday-list h4 {
+  font-size: 14px;
+  padding: 3px 7px 3px 10px;
+  margin-bottom: 5px;
+}
+
+#birthday-list li {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+#birthday-list li i {
+  color: #2cadaf;
+  margin-left: 3px;
+  font-size: 10px;
+}
+#birthday-list li:last-child {
+  border-bottom: none;
+}
+
+.hidden {
+  display: none;
+}
+.top {
+  display: flex;
+  gap: 10px;
+  margin: 10px 50px 0 5px;
+  width: 80%;
+}
+.top-right {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 5px 5px 5px;
+  border-radius: 10px;
+}
+
+.slider {
+  background: white;
+  overflow: hidden;
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.slider img {
+  border-radius: 10px;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+.swiper-slide {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 30%;
+  height: 100%;
+}
+.top-left h2 {
+  font-size: 14px;
+  padding: 0 10px 0 0;
+  border-right: 3px solid #33c1c3;
+}
+.top-left .list {
+  background-color: transparent;
+  padding: 13px 17px 13px 17px;
+  border-radius: 10px;
+  border: 2px solid rgb(226, 226, 226);
+}
+.top-left .list ul {
+  list-style: none;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.top-left .list ul li {
+  border: 2px solid rgb(226, 226, 226);
+  display: flex;
+  gap: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 12px 20px 12px 20px;
+}
+#software-list li .fa-chevron-left {
+  cursor: pointer;
+  background: #33c1c3;
+  font-size: 8px;
+  padding: 5px 12px 5px 12px;
+  border-radius: 20px;
+  position: absolute;
+  color: black;
+  left: 14px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  row-gap: 50px;
+  margin: 10px 50px 0 5px;
+  width: 80%;
+}
+
+.bottom-right h2 {
+  font-size: 14px;
+  padding: 0 10px 0 0;
+  border-right: 3px solid #33c1c3;
+}
+
+.notice-list {
+  position: relative;
+  margin-top: 8px;
+  border: 2px solid rgb(228, 228, 228);
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.notice-list span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 5px 4px 5px;
+  border-radius: 10px;
+  border: 2px solid rgb(252, 205, 65);
+}
+
+.notice-list span i {
+  font-size: 40px;
+}
+
+.notice-list span p {
+  margin: 0;
+  font-size: 12px;
+  color: #333;
+}
+
+.notice-list .info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.notice-list .info .details {
+  margin-top: 8px;
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-list .details .date {
+  font-size: 11px;
+  color: #777;
+}
+.notice-list .details .date i {
+  font-size: 11px;
+}
+
+.notice-list .details .more {
+  display: flex;
+  align-items: center;
+  background: #33c1c3;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.notice-list .details .more i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.list {
+  margin-top: 1px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list ul li {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
+.list ul li div {
+  background: rgb(222, 222, 222);
+  padding: 2px 8px 2px 8px;
+  border-radius: 20px;
+}
+.more2 {
+  display: flex;
+  justify-content: space-between;
+}
+.more2 span {
+  border: none;
+  color: transparent;
+}
+.more-btn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: #33c1c3;
+  padding: 1px 10px 1px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.bottom-left h2 {
+  font-size: 14px;
+  padding: 0 10px 0 0;
+  border-right: 3px solid #33c1c3;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(228, 228, 228);
+}
+.social-media .link {
+  display: flex;
+  gap: 12px;
+  box-shadow: 1px 1px 6px 1px #cdcdcd;
+  border-radius: 10px;
+  padding: 12px 30px 12px 30px;
+  font-size: 14px;
+  background-color: white;
+}
