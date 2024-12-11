@@ -1,7 +1,7 @@
 @font-face {
   font-family: "IRANYekanXFaNum";
   src: url("/static/home/fonts/IRANYekanXFaNum-Bold.woff2") format("woff2"),
-       url("/static/home/fonts/IRANYekanXFaNum-Regular.woff") format("woff");
+    url("/static/home/fonts/IRANYekanXFaNum-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,10 +19,9 @@ body {
 header {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid rgb(226, 226, 226);
   gap: 1rem;
   width: 80%;
-  margin: 0 50px 0 5px;
+  margin-left: 50px;
   padding: 5px 0px 5px 10px;
 }
 .header-items {
@@ -74,19 +73,19 @@ header {
 
 #birthday-list li {
   font-size: 12px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  /* Ensures space between name and birthday */
-    border-bottom: 1px solid #e0e0e0;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures space between name and birthday */
+  border-bottom: 1px solid #e0e0e0;
 }
 #birthday-list li .name {
-    margin-right: 10px;  /* Space between the name and the birthday */
+  margin-right: 10px; /* Space between the name and the birthday */
 }
 
 #birthday-list li .birthday {
-    font-size: 12px;
-    color: #666;  /* Optional: style for the birthday */
+  font-size: 12px;
+  color: #666; /* Optional: style for the birthday */
 }
 
 #birthday-list li i {
@@ -145,17 +144,17 @@ header {
 
 .list-heading {
   font-size: 14px;
-  padding-bottom: 100px; /* Adjust space between heading and list */
+  padding-bottom: 100px;
   text-align: right;
-   margin-bottom: -20px;
-   margin-top:20;
+  margin-bottom: -20px;
+  margin-top: 20;
 }
 .top-left {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  width: 30%;
-  padding: 0 ;
+  width: 100%;
+  padding: 0;
   height: 100%;
 }
 .top-left h2 {
@@ -168,7 +167,7 @@ header {
   padding: 13px 17px 13px 17px;
   border-radius: 10px;
   border: 2px solid rgb(226, 226, 226);
-   width: 300px; /* عرض باکس */
+  width: 100%;
 }
 
 .top-left .list ul {
@@ -177,41 +176,51 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: 200px; /* ارتفاع دلخواه */
+  max-height: 200px;
   overflow-y: auto;
 }
 
 .top-left .list ul li {
+  width: 100%;
   border: 2px solid rgb(226, 226, 226);
   display: flex;
-  gap: 6px;
-
+  gap: 10px;
+  justify-items: space-between;
   align-items: center;
   border-radius: 20px;
   padding: 12px 20px 12px 20px;
 }
+.top-left .list ul li a {
+  width: 100%;
+  display: flex;
+  gap:10px;
+  justify-content: space-between;
+}
+.top-left .list ul li a span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 #software-list li .fa-chevron-left {
+  margin-left: 5px;
   cursor: pointer;
   background: #33c1c3;
   font-size: 8px;
   padding: 5px 12px;
   border-radius: 20px;
-  left: 20x;
+  left: 20px;
 }
 
-
 .custom-icon {
-    color: red; /* Gold color */
-    font-size: 24px; /* Larger size */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+  color: red;
+  font-size: 24px; 
+  transition: transform 0.3s ease; 
 }
 
 .custom-icon:hover {
-    transform: scale(1.2); /* Slightly enlarge on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
 }
-
-
 
 .bottom {
   display: grid;
@@ -233,7 +242,7 @@ header {
   margin-top: 8px;
   border: 2px solid rgb(228, 228, 228);
   border-radius: 10px;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px 8px 15px;
 }
 
 .notice-list span {
@@ -267,7 +276,6 @@ header {
   border: none;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .notice-list .details .date {
@@ -320,14 +328,7 @@ header {
   padding: 2px 8px 2px 8px;
   border-radius: 20px;
 }
-.more2 {
-  display: flex;
-  justify-content: space-between;
-}
-.more2 span {
-  border: none;
-  color: transparent;
-}
+
 .more-btn {
   display: flex;
   gap: 5px;
@@ -346,192 +347,172 @@ header {
   border-right: 3px solid #33c1c3;
 }
 .social-media {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid rgb(228, 228, 228);
-    background-color: #f9f9f9; /* Light background for contrast */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(228, 228, 228);
 }
 
 .social-media .link {
-    display: flex;
-    align-items: center; /* Center icons and text vertically */
-    gap: 12px;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    border-radius: 10px;
-    padding: 12px 30px;
-    font-size: 14px;
-    background-color: white;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-size: 14px;
+  background-color: white;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-media .link:hover {
-    background-color: #e0e0e0; /* Change background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #e6e4e4;
+  transform: scale(1.02);
 }
 
 .social-media .link a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .social-media .linkedin {
-    color: #0077b5; /* LinkedIn color */
+  color: #0077b5;
 }
 
 .social-media .whatsapp {
-    color: #25D366; /* WhatsApp color */
+  color: #25d366;
 }
 
 .social-media .instagram {
-    color: #C13584; /* Instagram color */
+  color: #c13584;
 }
 
 .social-media .telegram {
-    color: #0088cc; /* Telegram color */
+  color: #0088cc;
 }
 
 .logo {
-            width: 55px; /* Set width to 55 pixels */
-            height: auto; /* Maintain aspect ratio */
-        }
-
+  width: 55px;
+  height: auto;
+}
 
 .software-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .software-link:hover {
-    color: #33c1c3;
+  color: #33c1c3;
 }
 
 a {
-  text-decoration: none; /* Removes the underline */
-  color: inherit; /* Inherits the color of the parent element */
+  text-decoration: none;
+  color: inherit;
 }
 
 h2 {
-    margin-bottom: 20px; /* Adjust the value to set the desired margin */
+  margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
 .news-details {
-    margin: 30px auto;
-    max-width: 800px;
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
 }
 
 .news-details h1 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: #333;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .news-details .news-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .news-details .news-date {
-    font-size: 14px;
-    color: #777;
+  font-size: 14px;
+  color: #777;
 }
 
 .news-details .news-image {
-    margin-top: 15px;
-    max-width: 50%;
-    border-radius: 8px;
+  margin-top: 15px;
+  max-width: 50%;
+  border-radius: 8px;
 }
 
 .news-details .news-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .news-details .news-content {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 30px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
 .back-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: #33c1c3;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #33c1c3;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .back-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .back-link i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
-
-
-
-
-
-
 .pagination ul {
+  font-size: 12px;
   list-style: none;
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding: 0;
-  margin: 20px 0;
+  margin: 1px;
 }
 
 .pagination ul li {
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px 10px;
 }
 
 .pagination ul li a {
   text-decoration: none;
-  color: #007bff;
+  color: #33c1c3;
 }
 
 .pagination ul li a:hover {
-  color: #0056b3;
+  color: #2ca2a4;
   text-decoration: underline;
 }
-
-
-
-
-
 
 /* General Reset */
 * {
@@ -543,8 +524,10 @@ h2 {
 header {
   display: flex;
   align-items: center;
-  background-color: #999;
-  padding: 10px 10px;
+  background-color: #f8f9fd;
+  margin-right: 50px;
+  border-bottom: 2px solid rgb(194, 194, 194);
+  padding: 5px 10px 5px 10px;
 }
 
 .logo {
@@ -601,8 +584,6 @@ header {
 .menu-item:hover .submenu {
   display: flex;
 }
-
-
 
 .submenu li {
   list-style: none; /* Remove default list item styles */
