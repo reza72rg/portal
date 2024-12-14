@@ -326,3 +326,19 @@ header {
   font-size: 14px;
   background-color: white;
 }
+table,
+th,
+td {
+  border-radius: 5px;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th,
+td {
+  background-color: #ececec;
+  padding: 10px;
+}
+th{
+  background-color: #33c1c3;
+}
+
