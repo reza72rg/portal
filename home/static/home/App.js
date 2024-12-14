@@ -1,7 +1,5 @@
 const softwareList = document.getElementById("software-list");
-const softwareListItems = [
-
-];
+const softwareListItems = [];
 
 softwareListItems.forEach((item) => {
   const listItem = document.createElement("li");
@@ -52,4 +50,12 @@ document.addEventListener("click", function (e) {
     bIcon.classList.remove("fa-chevron-up");
     bIcon.classList.add("fa-chevron-down");
   }
+});
+
+// info
+
+const infoIcon = document.querySelector(".info-list");
+
+infoIcon.addEventListener("click", function () {
+  console.log("info");
 });

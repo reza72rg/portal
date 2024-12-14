@@ -18,6 +18,7 @@ body {
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   width: 80%;
@@ -193,7 +194,7 @@ header {
 .top-left .list ul li a {
   width: 100%;
   display: flex;
-  gap:10px;
+  gap: 10px;
   justify-content: space-between;
 }
 .top-left .list ul li a span {
@@ -214,8 +215,8 @@ header {
 
 .custom-icon {
   color: red;
-  font-size: 24px; 
-  transition: transform 0.3s ease; 
+  font-size: 24px;
+  transition: transform 0.3s ease;
 }
 
 .custom-icon:hover {
@@ -349,7 +350,7 @@ header {
 .social-media {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 19px;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid rgb(228, 228, 228);
@@ -523,11 +524,15 @@ h2 {
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #f8f9fd;
   margin-right: 50px;
   border-bottom: 2px solid rgb(194, 194, 194);
   padding: 5px 10px 5px 10px;
+}
+header .info-list {
+  cursor: pointer;
 }
 
 .logo {
@@ -606,3 +611,4 @@ header {
   display: flex;
   flex-direction: column;
 }
+
